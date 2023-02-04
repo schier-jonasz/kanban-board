@@ -1,0 +1,6 @@
+{
+  mongoUrl: 'mongodb://root:root@localhost:27017/kanban?tls=false&ssl=false&authSource=admin',
+  jwt: {
+    secret: 'secret_key'
+  }
+}
