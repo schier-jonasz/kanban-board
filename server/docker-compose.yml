@@ -1,0 +1,44 @@
+version: "3.6"
+
+services:
+#  kanban-board-app:
+#    image: 'kanban-board'
+#    build:
+#      dockerfile: Dockerfile
+#      context: .
+#      args:
+#        base_image: 'kanban-board.dependency'
+#    container_name: kanban-board-app
+#    env_file: ./.env
+#    working_dir: /app
+#    command: npm run start:debug
+#    #    command: npm run start # uncomment preferred version
+#    volumes:
+#      # mount current dir into docker container
+#      - ./app:/app
+#      # ignore local node_modules, use container
+#      # - /app/node_modules
+#    ports:
+#      - '3000:3000'
+#      - '9229:9229' # uncomment to turn on debugging
+#    networks:
+#      - kanban-board-network
+
+  mongo:
+    image: mongo:4.2
+    container_name: kanban-board-mongo
+    hostname: kanban-board-mongo
+    networks:
+      - kanban-board-network
+    ports:
+      - '27017:27017'
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=root
+      - MONGO_INITDB_DATABASE=kanban
+      - MONGO_INITDB_USER=kanban-user
+      - MONGO_INITDB_PWD=example
+
+networks:
+  kanban-board-network:
+    driver: bridge
