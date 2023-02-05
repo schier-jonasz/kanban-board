@@ -2,8 +2,7 @@ import { Module } from "@nestjs/common";
 import { MongooseModule } from "@nestjs/mongoose";
 import { Config } from "@unifig/core";
 import { ConfigModule } from "@unifig/nest";
-import { MongoConfig } from "./config";
-import { TeamModule } from "./team/team.module";
+import { UserModule } from "./user/user.module";
 
 @Module({
   imports: [
@@ -14,6 +13,7 @@ import { TeamModule } from "./team/team.module";
       useUnifiedTopology: true,
     }),
     TeamModule,
+    UserModule,
   ],
 })
 export class AppModule {}
