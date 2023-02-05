@@ -3,6 +3,7 @@ import { MongooseModule } from "@nestjs/mongoose";
 import { Config } from "@unifig/core";
 import { ConfigModule } from "@unifig/nest";
 import { MongoConfig } from "./config";
+import { TeamModule } from "./team/team.module";
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { MongoConfig } from "./config";
       autoIndex: false,
       useUnifiedTopology: true,
     }),
+    TeamModule,
   ],
 })
 export class AppModule {}
