@@ -1,9 +1,11 @@
 {
-  "semi": false,
+  "semi": true,
   "singleQuote": true,
   "tabWidth": 2,
   "useTabs": false,
   "arrowParens": "always",
   "printWidth": 280,
-  "endOfLine":"auto"
+  "endOfLine":"auto",
+  "htmlWhitespaceSensitivity": "ignore",
+  "singleAttributePerLine": true
 }

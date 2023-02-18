@@ -1,13 +1,9 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
+import NavBar from './components/NavBar.vue';
 </script>
 
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link :to="{ name: 'LoginView' }">Login</router-link>
-  </nav>
+  <NavBar />
   <router-view />
 </template>
 

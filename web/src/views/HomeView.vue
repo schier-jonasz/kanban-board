@@ -1,5 +1,3 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="@/assets/vue.svg" />
-  </div>
+  <div class="home"></div>
 </template>

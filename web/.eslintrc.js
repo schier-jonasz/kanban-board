@@ -10,7 +10,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'prettier',
     'plugin:prettier/recommended',
-    // 'plugin:vue/vue3-essential',
+    'plugin:vue/vue3-essential',
     '@vue/eslint-config-typescript/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
@@ -36,10 +36,7 @@ module.exports = {
     'prettier/prettier': [
       'error',
       {
-        semi: false,
-        singleQuote: true,
-        printWidth: 120,
-        arrowParens: 'avoid',
+        endOfLine: 'auto',
       },
     ],
     'unused-imports/no-unused-imports': 'error',
@@ -58,16 +55,16 @@ module.exports = {
         ],
       },
     ],
-    'no-restricted-imports': [
-      'error',
-      {
-        patterns: [
-          // no relative imports allowed, always use alias, it makes easier to move files later if necessary
-          './**',
-          '../**',
-        ],
-      },
-    ],
+    // 'no-restricted-imports': [
+    //   'error',
+    //   {
+    //     patterns: [
+    //       // no relative imports allowed, always use alias, it makes easier to move files later if necessary
+    //       './**',
+    //       '../**',
+    //     ],
+    //   },
+    // ],
     '@typescript-eslint/no-unused-vars': 'error',
   },
   overrides: [
@@ -84,4 +81,4 @@ module.exports = {
       },
     },
   ],
-}
+};
