@@ -18,6 +18,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'RegisterView',
     component: () => import('@/views/RegisterView.vue'),
   },
+  {
+    path: '/board',
+    name: 'BoardView',
+    component: () => import('@/features/board/pages/BoardView.vue'),
+  },
 ];
 
 const router = createRouter({
