@@ -3,7 +3,7 @@ import { IssuePriority, IssueStatus, IssueType } from '@/interfaces/issue';
 import { Issue } from './issue.dto';
 
 export default {
-  getIssues: () => issues,
+  getIssues: (): Promise<Issue[]> => new Promise((resolve) => setTimeout(() => resolve(issues), 1000)),
 };
 
 const issues: Issue[] = [

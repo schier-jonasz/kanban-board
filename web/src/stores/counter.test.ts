@@ -1,4 +1,4 @@
-import { useCounterStore } from '@/store/counter'
+import { useCounterStore } from '@/stores/counter'
 
 describe('Counter', () => {
   it('increments count', () => {
