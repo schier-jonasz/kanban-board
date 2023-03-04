@@ -1,27 +1,29 @@
 <template>
-  <nav class="d-flex align-center justify-space-between elevation-2">
+  <nav class="d-flex align-center justify-space-between elevation-2 py-1">
     <div>
       <router-link to="/">
         <v-btn
-          icon="mdi-home"
-          elevation="0"
-        ></v-btn>
+          class="link link--home"
+          variant="flat"
+        >
+          HOME
+        </v-btn>
       </router-link>
     </div>
     <div>
       <router-link :to="{ name: 'LoginView' }">
         <v-btn
-          class="login"
-          variant="text"
+          class="link"
+          variant="outlined"
         >
           Log in
         </v-btn>
       </router-link>
-      <span>|</span>
       <router-link :to="{ name: 'RegisterView' }">
         <v-btn
-          class="login"
-          variant="text"
+          class="link mx-4"
+          variant="flat"
+          color="primary"
         >
           Sign in
         </v-btn>
@@ -36,8 +38,12 @@ a {
   text-decoration: none;
   color: $sea-green;
 
-  .login {
+  .link {
     font-weight: bold;
+
+    &--home {
+      color: $dark-purple;
+    }
   }
 }
 </style>

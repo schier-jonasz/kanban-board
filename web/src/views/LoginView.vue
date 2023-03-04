@@ -1,7 +1,7 @@
 <template>
   <main class="main d-flex flex-column justify-center align-center">
     <AuthForm :title="'Log in'" />
-    <p>
+    <p class="mt-2">
       No account yet?
       <router-link :to="{ name: 'RegisterView' }">
         <span class="register-link">Register now</span>

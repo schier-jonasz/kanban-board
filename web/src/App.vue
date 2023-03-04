@@ -7,4 +7,13 @@ import NavBar from './components/NavBar.vue';
   <router-view />
 </template>
 
-<style scoped></style>
+<style>
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+</style>
