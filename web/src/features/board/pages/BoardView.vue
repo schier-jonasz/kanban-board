@@ -1,5 +1,6 @@
 <template>
   <main>
+    <SideNavigation />
     <header>
       <h2>Project name</h2>
     </header>
@@ -43,6 +44,7 @@
 </template>
 
 <script setup lang="ts">
+import SideNavigation from '@/components/SideNavigation.vue';
 import { useIssueStore } from '@/stores/issueStore';
 
 import IssueColumn from '../components/IssueColumn.vue';

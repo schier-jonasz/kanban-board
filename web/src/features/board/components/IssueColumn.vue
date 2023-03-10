@@ -6,6 +6,7 @@
       :title="props.title"
     >
       <IssueItem />
+      <IssueItem />
     </v-card>
   </section>
 </template>
