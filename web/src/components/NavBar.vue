@@ -1,9 +1,9 @@
 <template>
-  <nav class="d-flex align-center justify-space-between elevation-2 py-1">
+  <nav class="d-flex align-center justify-space-between py-1 w-100">
     <div>
       <router-link to="/">
         <v-btn
-          class="link link--home"
+          class="ml-2 link link--home"
           variant="flat"
         >
           HOME
@@ -23,7 +23,7 @@
         <v-btn
           class="link mx-4"
           variant="flat"
-          color="primary"
+          color="success"
         >
           Sign in
         </v-btn>

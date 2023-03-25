@@ -1,9 +1,10 @@
 <template>
-  <main>
+  <main class="pa-4">
     <SideNavigation />
     <header>
       <h2>Project name</h2>
     </header>
+    <ToolBar />
     <section>
       <v-container>
         <v-row>
@@ -48,6 +49,7 @@ import SideNavigation from '@/components/SideNavigation.vue';
 import { useIssueStore } from '@/stores/issueStore';
 
 import IssueColumn from '../components/IssueColumn.vue';
+import ToolBar from '../components/ToolBar.vue';
 
 const issueStore = useIssueStore();
 
