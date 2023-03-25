@@ -24,7 +24,7 @@
           LOW
         </v-chip>
       </div>
-      <p class="issue__description my-2">As a translator, I want integrate Crowdin webhook to notify translators about changed strings</p>
+      <p class="issue__title my-2">Integrate Crowdin webhook to notify translators about changed strings</p>
       <div class="issue-footer">
         <p class="issue-footer__date">08.03.2023</p>
         <div class="assigment">
@@ -49,8 +49,9 @@
 @import '@/styles/colors.scss';
 
 .issue {
-  &__description {
+  &__title {
     font-size: 14px;
+    font-weight: 400;
   }
 }
 
