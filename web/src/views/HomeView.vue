@@ -25,6 +25,7 @@
 
 <style lang="scss" scoped>
 @import '@/styles/colors.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100;1,300&display=swap');
 
 .main {
   height: 95vh;
@@ -32,11 +33,13 @@
 }
 
 .hero-left {
+  width: 60%;
   padding: 32px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: Impact, 'Arial Narrow', sans-serif;
+  /* font-family: Impact, 'Arial Narrow', sans-serif; */
+  /* font-family: 'Roboto Mono', monospace; */
 
   &__title {
     font-size: 3em;
@@ -46,20 +49,22 @@
     color: $dark-purple;
   }
   &__glow {
-    width: 50%;
+    width: 75%;
   }
 }
 
 .hero-right {
+  width: 40%;
   height: 100%;
   width: 100%;
   position: relative;
 
   &__background {
     position: absolute;
-    z-index: 0;
+    z-index: -1;
     bottom: 0;
     right: 0;
+    width: 90%;
   }
 
   &__image {
@@ -67,6 +72,7 @@
     z-index: 1;
     bottom: 0;
     right: 0;
+    width: 80%;
   }
 }
 </style>

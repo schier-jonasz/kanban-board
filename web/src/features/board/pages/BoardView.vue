@@ -1,16 +1,15 @@
 <template>
-  <main>
+  <main class="pa-4">
+    <SideNavigation />
     <header>
       <h2>Project name</h2>
     </header>
+    <ToolBar />
     <section>
       <v-container>
         <v-row>
-          <v-col
-            v-for="i in 3"
-            :key="i"
-          >
-            <v-card title="Status">
+          <v-col>
+            <!-- <v-card title="Status">
               <v-list>
                 <v-list-item
                   v-for="issue in issueStore.issues"
@@ -21,7 +20,23 @@
                   <v-list-item-title>{{ issue.id }}</v-list-item-title>
                 </v-list-item>
               </v-list>
-            </v-card>
+            </v-card> -->
+            <IssueColumn
+              title="TO DO"
+              status="TO-DO"
+            />
+          </v-col>
+          <v-col>
+            <IssueColumn
+              title="IN PROGRESS"
+              status="IN-PROGRESS"
+            />
+          </v-col>
+          <v-col>
+            <IssueColumn
+              title="DONE"
+              status="DONE"
+            />
           </v-col>
         </v-row>
       </v-container>
@@ -30,7 +45,11 @@
 </template>
 
 <script setup lang="ts">
+import SideNavigation from '@/components/SideNavigation.vue';
 import { useIssueStore } from '@/stores/issueStore';
+
+import IssueColumn from '../components/IssueColumn.vue';
+import ToolBar from '../components/ToolBar.vue';
 
 const issueStore = useIssueStore();
 
